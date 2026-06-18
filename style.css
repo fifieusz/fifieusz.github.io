@@ -925,6 +925,13 @@ p {
   opacity: 0.8;
 }
 
+.contact-note {
+  max-width: 42rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+}
+
 .contact-card .button-ghost {
   border-color: rgba(255, 255, 255, 0.24);
   background: transparent;
