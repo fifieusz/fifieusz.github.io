@@ -182,13 +182,19 @@ a {
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.nav-links a.is-active {
   color: var(--ink);
 }
 
 .nav-links a:hover::after,
-.nav-links a:focus-visible::after {
+.nav-links a:focus-visible::after,
+.nav-links a.is-active::after {
   transform: scaleX(1);
+}
+
+.section-rail {
+  display: none;
 }
 
 .language-switcher {
@@ -980,6 +986,83 @@ p {
   will-change: transform;
 }
 
+@media (min-width: 1280px) {
+  .section-rail {
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    z-index: 40;
+    display: grid;
+    gap: 0.25rem;
+    border: 1px solid rgba(217, 226, 234, 0.92);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.86);
+    padding: 0.48rem 0.38rem;
+    box-shadow: 0 18px 44px rgba(17, 24, 39, 0.1);
+    transform: translateY(-50%);
+    backdrop-filter: blur(14px);
+  }
+
+  .section-rail a {
+    position: relative;
+    display: grid;
+    width: 1.85rem;
+    height: 1.85rem;
+    place-items: center;
+    border-radius: 999px;
+    color: var(--muted);
+    outline-offset: 4px;
+  }
+
+  .section-rail a::before {
+    width: 0.52rem;
+    height: 0.52rem;
+    border: 2px solid rgba(15, 118, 110, 0.28);
+    border-radius: 999px;
+    background: #fff;
+    content: "";
+    transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .section-rail span {
+    position: absolute;
+    right: 2.45rem;
+    max-width: 11rem;
+    border: 1px solid rgba(217, 226, 234, 0.9);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 0.38rem 0.62rem;
+    box-shadow: 0 12px 28px rgba(17, 24, 39, 0.1);
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    transform: translateX(6px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    white-space: nowrap;
+  }
+
+  .section-rail a:hover::before,
+  .section-rail a:focus-visible::before,
+  .section-rail a.is-active::before {
+    border-color: var(--accent);
+    background: var(--accent);
+    box-shadow: 0 0 0 5px rgba(15, 118, 110, 0.12);
+    transform: scale(1.08);
+  }
+
+  .section-rail a:hover span,
+  .section-rail a:focus-visible span,
+  .section-rail a.is-active span {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1013,6 +1096,8 @@ p {
     left: 1rem;
     max-width: calc(100vw - 2rem);
     display: grid;
+    align-items: stretch;
+    justify-content: stretch;
     gap: 0.55rem;
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -1044,7 +1129,8 @@ p {
   }
 
   .nav-links a:hover,
-  .nav-links a:focus-visible {
+  .nav-links a:focus-visible,
+  .nav-links a.is-active {
     background: var(--surface-alt);
   }
 

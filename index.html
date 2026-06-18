@@ -38,11 +38,11 @@
 
         <div class="nav-menu" id="nav-menu" data-nav-menu>
           <div class="nav-links">
-            <a href="#profile" data-i18n="nav_profile">Profil</a>
-            <a href="#projects" data-i18n="nav_projects">Prosjekter</a>
-            <a href="#skills" data-i18n="nav_skills">Ferdigheter</a>
-            <a href="#experience" data-i18n="nav_experience">Erfaring</a>
-            <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+            <a href="#profile" data-section-link="profile" data-i18n="nav_profile">Profil</a>
+            <a href="#projects" data-section-link="projects" data-i18n="nav_projects">Prosjekter</a>
+            <a href="#skills" data-section-link="skills" data-i18n="nav_skills">Ferdigheter</a>
+            <a href="#experience" data-section-link="experience" data-i18n="nav_experience">Erfaring</a>
+            <a href="#contact" data-section-link="contact" data-i18n="nav_contact">Kontakt</a>
           </div>
 
           <div class="language-switcher" aria-label="Velg språk" data-i18n-attr="aria-label:language_aria">
@@ -53,6 +53,16 @@
         </div>
       </nav>
     </header>
+
+    <nav class="section-rail" aria-label="Seksjonsnavigasjon" data-i18n-attr="aria-label:section_rail_aria">
+      <a href="#profile" data-section-link="profile"><span data-i18n="rail_profile">Profil</span></a>
+      <a href="#education" data-section-link="education"><span data-i18n="rail_education">Utdanning</span></a>
+      <a href="#projects" data-section-link="projects"><span data-i18n="rail_projects">Prosjekter</span></a>
+      <a href="#skills" data-section-link="skills"><span data-i18n="rail_skills">Ferdigheter</span></a>
+      <a href="#experience" data-section-link="experience"><span data-i18n="rail_experience">Erfaring</span></a>
+      <a href="#languages" data-section-link="languages"><span data-i18n="rail_languages">Språk</span></a>
+      <a href="#contact" data-section-link="contact"><span data-i18n="rail_contact">Kontakt</span></a>
+    </nav>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">

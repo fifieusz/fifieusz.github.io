@@ -14,6 +14,14 @@ const translations = {
     nav_skills: "Ferdigheter",
     nav_experience: "Erfaring",
     nav_contact: "Kontakt",
+    section_rail_aria: "Seksjonsnavigasjon",
+    rail_profile: "Profil",
+    rail_education: "Utdanning",
+    rail_projects: "Prosjekter",
+    rail_skills: "Ferdigheter",
+    rail_experience: "Erfaring",
+    rail_languages: "Språk",
+    rail_contact: "Kontakt",
     hero_eyebrow: "Tilgjengelig for relevante IT-stillinger i Norge",
     hero_headline: "Nyutdannet bachelor i informasjonssystemer",
     hero_intro:
@@ -163,6 +171,14 @@ const translations = {
     nav_skills: "Skills",
     nav_experience: "Experience",
     nav_contact: "Contact",
+    section_rail_aria: "Section navigation",
+    rail_profile: "Profile",
+    rail_education: "Education",
+    rail_projects: "Projects",
+    rail_skills: "Skills",
+    rail_experience: "Experience",
+    rail_languages: "Languages",
+    rail_contact: "Contact",
     hero_eyebrow: "Available for relevant IT roles in Norway",
     hero_headline: "Newly graduated bachelor in Information Systems",
     hero_intro:
@@ -312,6 +328,14 @@ const translations = {
     nav_skills: "Umiejętności",
     nav_experience: "Doświadczenie",
     nav_contact: "Kontakt",
+    section_rail_aria: "Nawigacja sekcji",
+    rail_profile: "Profil",
+    rail_education: "Edukacja",
+    rail_projects: "Projekty",
+    rail_skills: "Umiejętności",
+    rail_experience: "Doświadczenie",
+    rail_languages: "Języki",
+    rail_contact: "Kontakt",
     hero_eyebrow: "Dostępny na odpowiednie stanowiska IT w Norwegii",
     hero_headline: "Absolwent kierunku systemy informacyjne",
     hero_intro:
@@ -456,6 +480,10 @@ const profileImage = document.querySelector("[data-profile-image]");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const projectTabs = document.querySelectorAll("[data-filter]");
 const projectCards = document.querySelectorAll("[data-category]");
+const sectionLinks = document.querySelectorAll("[data-section-link]");
+const trackedSections = ["profile", "education", "projects", "skills", "experience", "languages", "contact"]
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
 const revealItems = document.querySelectorAll(".reveal");
 const supportedLanguages = Object.keys(translations);
 const languageStorageKey = "portfolio-language";
@@ -506,6 +534,42 @@ const closeMobileNav = () => {
   navMenu.classList.remove("is-open");
   document.body.classList.remove("nav-open");
   updateNavToggleLabel();
+};
+
+const setActiveSection = (sectionId) => {
+  sectionLinks.forEach((link) => {
+    const isActive = link.dataset.sectionLink === sectionId;
+    link.classList.toggle("is-active", isActive);
+
+    if (isActive) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+};
+
+const updateActiveSectionFromScroll = () => {
+  if (!trackedSections.length) return;
+
+  const activationLine = window.innerHeight * 0.38;
+  let activeSectionId = "";
+
+  trackedSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= activationLine) {
+      activeSectionId = section.id;
+    }
+  });
+
+  setActiveSection(activeSectionId);
+};
+
+const updateScrollState = () => {
+  if (header) {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+
+  updateActiveSectionFromScroll();
 };
 
 if (year) {
@@ -609,9 +673,8 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-window.addEventListener("scroll", () => {
-  if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 8);
-});
+window.addEventListener("scroll", updateScrollState, { passive: true });
+window.addEventListener("resize", updateActiveSectionFromScroll);
 
 applyLanguage(localStorage.getItem(languageStorageKey) || "no");
+updateScrollState();
