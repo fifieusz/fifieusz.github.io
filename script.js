@@ -57,6 +57,10 @@ const translations = {
     education_degree: "Bachelorstudium i informasjonssystemer, 180 studiepoeng",
     education_school: "Høgskolen i Østfold, Halden",
     education_specialization: "Fordypning i Software Engineering og Business Intelligence.",
+    education_highschool_period: "Før bachelorstudiet",
+    education_highschool_title: "St. Olav videregående skole, Sarpsborg",
+    education_highschool_text:
+      "Deltok i elevrådet alle tre årene, med erfaring fra ansvar, samarbeid, kommunikasjon og å representere medelever.",
     bridge_eyebrow: "Hvorfor informasjonssystemer",
     bridge_title: "Broen mellom forretning, data og teknologi",
     bridge_text:
@@ -214,6 +218,10 @@ const translations = {
     education_degree: "Bachelorstudium i informasjonssystemer, 180 study credits",
     education_school: "Høgskolen i Østfold, Halden",
     education_specialization: "Specialization in Software Engineering and Business Intelligence.",
+    education_highschool_period: "Before bachelor studies",
+    education_highschool_title: "St. Olav Upper Secondary School, Sarpsborg",
+    education_highschool_text:
+      "Served on the student council all three years, gaining experience with responsibility, collaboration, communication and representing fellow students.",
     bridge_eyebrow: "Why Information Systems",
     bridge_title: "The bridge between business, data and technology",
     bridge_text:
@@ -371,6 +379,10 @@ const translations = {
     education_degree: "Bachelorstudium i informasjonssystemer, 180 punktów ECTS",
     education_school: "Høgskolen i Østfold, Halden",
     education_specialization: "Specjalizacja w Software Engineering oraz Business Intelligence.",
+    education_highschool_period: "Przed studiami licencjackimi",
+    education_highschool_title: "St. Olav videregående skole, Sarpsborg",
+    education_highschool_text:
+      "Przez wszystkie trzy lata działałem w samorządzie uczniowskim, zdobywając doświadczenie w odpowiedzialności, współpracy, komunikacji i reprezentowaniu innych uczniów.",
     bridge_eyebrow: "Dlaczego systemy informacyjne",
     bridge_title: "Most między biznesem, danymi i technologią",
     bridge_text:

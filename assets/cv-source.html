@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip Dominik Niewiadomski - CV</title>
+    <style>
+      :root {
+        --paper: #fbfaf7;
+        --ink: #141821;
+        --muted: #5c6573;
+        --line: #d8dde4;
+        --navy: #0f172a;
+        --accent: #0f766e;
+        --accent-soft: #dff5f2;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #e7ebef;
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.42;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        overflow: hidden;
+        background: var(--paper);
+        padding: 12mm;
+      }
+
+      .cv {
+        display: grid;
+        grid-template-columns: 61mm 1fr;
+        gap: 9mm;
+        height: 100%;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 5.2mm;
+        border-right: 1px solid var(--line);
+        padding-right: 7mm;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 5.2mm;
+        min-width: 0;
+      }
+
+      .portrait {
+        width: 43mm;
+        height: 52mm;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .name-block {
+        border-bottom: 2px solid var(--navy);
+        padding-bottom: 5mm;
+      }
+
+      .label {
+        margin: 0 0 2mm;
+        color: var(--accent);
+        font-size: 7.5pt;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        color: var(--navy);
+        font-size: 29pt;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .headline {
+        margin-top: 3mm;
+        color: var(--accent);
+        font-size: 13pt;
+        font-weight: 750;
+      }
+
+      .location {
+        margin-top: 2.5mm;
+        color: var(--muted);
+        font-size: 9.2pt;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+        color: var(--navy);
+        font-size: 12.2pt;
+        line-height: 1.15;
+      }
+
+      h2::after {
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+        content: "";
+      }
+
+      h3 {
+        color: var(--navy);
+        font-size: 9.8pt;
+        line-height: 1.2;
+      }
+
+      .section {
+        display: grid;
+        gap: 2.5mm;
+      }
+
+      .section p,
+      .item p,
+      .sidebar p,
+      li {
+        color: var(--muted);
+        font-size: 8.8pt;
+      }
+
+      .profile {
+        color: var(--ink);
+        font-size: 9.2pt;
+      }
+
+      .contact-list,
+      .plain-list,
+      .project-list {
+        display: grid;
+        gap: 2.3mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .contact-list strong,
+      .plain-list strong {
+        display: block;
+        color: var(--navy);
+        font-size: 8pt;
+      }
+
+      .contact-list a,
+      .link {
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      .portfolio-box {
+        border: 1px solid rgba(15, 118, 110, 0.28);
+        border-radius: 13px;
+        background: var(--accent-soft);
+        padding: 4mm;
+      }
+
+      .portfolio-box a {
+        display: block;
+        margin-top: 1mm;
+        color: var(--navy);
+        font-size: 10.5pt;
+        font-weight: 850;
+      }
+
+      .qr-row {
+        display: grid;
+        grid-template-columns: 23mm 1fr;
+        gap: 3.2mm;
+        align-items: center;
+        margin-top: 3mm;
+      }
+
+      .qr-row img {
+        width: 23mm;
+        height: 23mm;
+        border: 1px solid rgba(15, 118, 110, 0.18);
+        border-radius: 8px;
+        background: #fff;
+        padding: 1.2mm;
+      }
+
+      .qr-row p {
+        color: var(--navy);
+        font-size: 8pt;
+        font-weight: 650;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+      }
+
+      .tag {
+        border: 1px solid rgba(15, 118, 110, 0.18);
+        border-radius: 999px;
+        background: #fff;
+        padding: 1mm 2mm;
+        color: var(--accent);
+        font-size: 7.5pt;
+        font-weight: 750;
+        white-space: nowrap;
+      }
+
+      .item {
+        display: grid;
+        gap: 1mm;
+      }
+
+      .meta {
+        color: var(--accent);
+        font-size: 7.7pt;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
+
+      .project-list li {
+        position: relative;
+        padding-left: 4mm;
+      }
+
+      .project-list li::before {
+        position: absolute;
+        top: 1.8mm;
+        left: 0;
+        width: 1.8mm;
+        height: 1.8mm;
+        border-radius: 999px;
+        background: var(--accent);
+        content: "";
+      }
+
+      .cta-note {
+        border-left: 3px solid var(--accent);
+        background: rgba(15, 118, 110, 0.08);
+        padding: 3mm 3.5mm;
+        color: var(--navy);
+        font-size: 8.7pt;
+        font-weight: 650;
+      }
+
+      .footer {
+        margin-top: auto;
+        border-top: 1px solid var(--line);
+        padding-top: 3mm;
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="cv">
+        <aside class="sidebar">
+          <img class="portrait" src="profile.jpg" alt="Profilbilde av Filip Dominik Niewiadomski" />
+
+          <section class="section">
+            <h2>Kontakt</h2>
+            <ul class="contact-list">
+              <li>
+                <strong>E-post</strong>
+                <a href="mailto:filipos123.91@gmail.com">filipos123.91@gmail.com</a>
+              </li>
+              <li>
+                <strong>Telefon</strong>
+                <a href="tel:+4748510268">+47 485 10 268</a>
+              </li>
+              <li>
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/filip-niewiadomski-450096417/">linkedin.com/in/filip-niewiadomski</a>
+              </li>
+              <li>
+                <strong>Område</strong>
+                Sarpsborg, Fredrikstad og Halden. Åpen for kontor, hybrid og fjernarbeid.
+              </li>
+            </ul>
+          </section>
+
+          <section class="portfolio-box">
+            <p class="label">Full portefølje</p>
+            <p>Prosjekter, utdypende beskrivelser og språkvalg finnes på nettsiden.</p>
+            <a href="https://fifieusz.github.io/">fifieusz.github.io</a>
+            <div class="qr-row">
+              <img src="portfolio-qr.svg" alt="QR-kode til porteføljen" />
+              <p>Skann eller klikk linken for mer informasjon.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Ferdigheter</h2>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git/GitHub</span>
+              <span class="tag">DevOps</span>
+              <span class="tag">Low-code</span>
+              <span class="tag">Testing</span>
+              <span class="tag">Generativ AI</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Språk</h2>
+            <ul class="plain-list">
+              <li><strong>Polsk</strong>Morsmål</li>
+              <li><strong>Norsk bokmål</strong>Meget god</li>
+              <li><strong>Engelsk</strong>God</li>
+              <li><strong>Tysk</strong>Grunnleggende</li>
+            </ul>
+          </section>
+        </aside>
+
+        <section class="main">
+          <header class="name-block">
+            <p class="label">CV | nyutdannet IT-kandidat</p>
+            <h1>Filip Dominik Niewiadomski</h1>
+            <p class="headline">Bachelor i informasjonssystemer</p>
+            <p class="location">Sarpsborg | født 04.10.2004 i Polen, bosatt i Norge i 19 år</p>
+          </header>
+
+          <section class="section">
+            <h2>Profil</h2>
+            <p class="profile">
+              Nyutdannet innen informasjonssystemer fra Høgskolen i Østfold, med fordypning i Software Engineering og
+              Business Intelligence. Jeg søker relevante IT-stillinger der jeg kan kombinere teknisk forståelse med
+              brukerbehov, data og forretningsforståelse.
+            </p>
+            <p class="cta-note">
+              Denne CV-en er en kort oppsummering. Besøk porteføljen for flere prosjekter, mer kontekst og oppdatert
+              kontaktinformasjon.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2>Utdanning</h2>
+            <article class="item">
+              <p class="meta">2023-2026</p>
+              <h3>Bachelorstudium i informasjonssystemer, 180 studiepoeng</h3>
+              <p>Høgskolen i Østfold, Halden. Fordypning i Software Engineering og Business Intelligence.</p>
+            </article>
+            <article class="item">
+              <p class="meta">Videregående opplæring</p>
+              <h3>St. Olav videregående skole, Sarpsborg</h3>
+              <p>Deltok i elevrådet alle tre årene, med erfaring fra ansvar, samarbeid og å representere medelever.</p>
+            </article>
+          </section>
+
+          <section class="section">
+            <h2>Utvalgte prosjekter</h2>
+            <ul class="project-list">
+              <li>
+                <strong>CoachAI, bachelorprosjekt:</strong> prototype for AI-støtte innen coaching, salg og kundeservice.
+                Arbeidet ga erfaring med Docker, TypeScript, Python, AI-tjenester, testing og samarbeid med ekstern kunde.
+              </li>
+              <li>
+                <strong>Matsmart:</strong> appkonsept for smartere matvalg og redusert matsvinn. Prosjektledelse med WBS,
+                PERT, Gantt, budsjett og break-even. Karakter A skriftlig og muntlig.
+              </li>
+              <li>
+                <strong>Big Data:</strong> analyse av sammenhenger mellom værforhold og trafikkulykker i USA, med store
+                datasett, Spark, Docker, Cassandra og Zeppelin.
+              </li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>Erfaring</h2>
+            <article class="item">
+              <div class="two-col">
+                <div>
+                  <p class="meta">2022-nå</p>
+                  <h3>Renholder</h3>
+                </div>
+                <div>
+                  <p class="meta">2023-nå</p>
+                  <h3>Tilkallingsvikar</h3>
+                </div>
+              </div>
+              <p>
+                Hasle barnehage, Sarpsborg. Arbeid ved siden av studier med ansvar, punktlighet, struktur, selvstendighet
+                og samarbeid. Rollen er ikke IT-rettet, men viser stabilitet og pålitelighet over tid.
+              </p>
+            </article>
+          </section>
+
+          <section class="section">
+            <h2>Faglige styrker</h2>
+            <p>
+              Web Technology A, Introduction to Generative AI A, Project Management A, Business Intelligence B,
+              Business Software B, DevOps and Low-code Development B og IT Strategy B.
+            </p>
+          </section>
+
+          <p class="footer">
+            Vitnemål og referanser deles ved forespørsel. Flere detaljer finnes på
+            <a class="link" href="https://fifieusz.github.io/">fifieusz.github.io</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
