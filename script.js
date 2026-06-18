@@ -29,6 +29,19 @@ const translations = {
     profile_title: "Praktisk IT-bakgrunn med sterke akademiske resultater",
     profile_text:
       "Utdanningen min kombinerer programvareutvikling, forretningssystemer, dataanalyse og IT-strategi. Jeg liker strukturert problemløsning, å lære nye verktøy raskt og å gjøre tekniske krav forståelige for både brukere og interessenter.",
+    personal_aria: "Personlig bakgrunn",
+    personal_background_kicker: "Bakgrunn",
+    personal_background_title: "Polsk bakgrunn, norsk hverdag",
+    personal_background_text:
+      "Født 4. oktober 2004 i Polen og bosatt i Norge i 19 år. Det har gjort meg trygg i flere språk, kulturer og måter å samarbeide på.",
+    personal_creative_kicker: "Kreativt arbeid",
+    personal_creative_title: "Video, formidling og detaljer",
+    personal_creative_text:
+      "Jeg har erfaring med videoredigering og liker å gjøre informasjon tydelig, visuelt ryddig og lett å forstå.",
+    personal_discipline_kicker: "Disiplin",
+    personal_discipline_title: "Trening og piano",
+    personal_discipline_text:
+      "Trening og piano er hobbyer som passer personligheten min: jevn øving, tålmodighet og gradvis forbedring.",
     contact_info_aria: "Kontaktinformasjon",
     linkedin_profile: "LinkedIn-profil",
     education_eyebrow: "Utdanning",
@@ -155,6 +168,19 @@ const translations = {
     profile_title: "Practical IT background with strong academic results",
     profile_text:
       "My education combines software development, business systems, data analysis and IT strategy. I enjoy structured problem solving, learning new tools quickly and making technical requirements understandable for both users and stakeholders.",
+    personal_aria: "Personal background",
+    personal_background_kicker: "Background",
+    personal_background_title: "Polish background, Norwegian everyday life",
+    personal_background_text:
+      "Born on 4 October 2004 in Poland and living in Norway for 19 years. That has made me comfortable across languages, cultures and different ways of working together.",
+    personal_creative_kicker: "Creative work",
+    personal_creative_title: "Video, communication and details",
+    personal_creative_text:
+      "I have experience with video editing and enjoy making information clear, visually structured and easy to understand.",
+    personal_discipline_kicker: "Discipline",
+    personal_discipline_title: "Gym and piano",
+    personal_discipline_text:
+      "Gym training and piano fit my personality: steady practice, patience and gradual improvement.",
     contact_info_aria: "Contact information",
     linkedin_profile: "LinkedIn profile",
     education_eyebrow: "Education",
@@ -281,6 +307,19 @@ const translations = {
     profile_title: "Praktyczne podstawy IT i dobre wyniki akademickie",
     profile_text:
       "Moje wykształcenie łączy tworzenie oprogramowania, systemy biznesowe, analizę danych i strategię IT. Lubię uporządkowane rozwiązywanie problemów, szybkie uczenie się nowych narzędzi oraz tłumaczenie wymagań technicznych w sposób zrozumiały dla użytkowników i interesariuszy.",
+    personal_aria: "Tło osobiste",
+    personal_background_kicker: "Tło",
+    personal_background_title: "Polskie korzenie, norweska codzienność",
+    personal_background_text:
+      "Urodziłem się 4 października 2004 roku w Polsce i mieszkam w Norwegii od 19 lat. Dzięki temu swobodnie funkcjonuję w kilku językach, kulturach i sposobach współpracy.",
+    personal_creative_kicker: "Praca kreatywna",
+    personal_creative_title: "Wideo, komunikacja i szczegóły",
+    personal_creative_text:
+      "Mam doświadczenie w montażu wideo i lubię przedstawiać informacje jasno, estetycznie i w sposób łatwy do zrozumienia.",
+    personal_discipline_kicker: "Dyscyplina",
+    personal_discipline_title: "Siłownia i piano",
+    personal_discipline_text:
+      "Trening i piano pasują do mojego podejścia: regularna praktyka, cierpliwość i stopniowe doskonalenie.",
     contact_info_aria: "Informacje kontaktowe",
     linkedin_profile: "Profil LinkedIn",
     education_eyebrow: "Edukacja",
