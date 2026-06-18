@@ -9,7 +9,7 @@
       data-i18n-attr="content:meta_description"
     />
     <title data-i18n="page_title">Filip Dominik Niewiadomski | Portefølje</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20260618" />
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip_link">Gå til hovedinnhold</a>
@@ -98,7 +98,7 @@
           </div>
           <div class="availability-card">
             <span class="status-dot" aria-hidden="true"></span>
-            <p data-i18n="availability_text">Åpen for relevante roller innen software, data, BI, DevOps, testing og IT-support.</p>
+            <p data-i18n="availability_text">Åpen for relevante roller innen programvare, data, BI, DevOps, testing og IT-support.</p>
           </div>
         </aside>
       </section>
@@ -195,7 +195,7 @@
           </div>
           <div class="academic-grid">
             <article class="academic-card">
-              <h4 data-i18n="academic_software_title">Software og web</h4>
+              <h4 data-i18n="academic_software_title">Programvare og web</h4>
               <p data-i18n="academic_software_text">Frontend, webteknologi og praktisk utvikling.</p>
               <div class="grade-list">
                 <span>Web Technology <strong>A</strong></span>
@@ -234,16 +234,16 @@
           <p class="eyebrow" data-i18n="projects_eyebrow">Prosjekter</p>
           <h2 id="projects-title" data-i18n="projects_title">Akademiske prosjekter med praktisk relevans</h2>
           <p data-i18n="projects_intro">
-            Utvalgte prosjekter fra bachelorstudiet, prosjektledelse, webutvikling, software engineering og big data.
+            Utvalgte prosjekter fra bachelorstudiet, prosjektledelse, webutvikling, programvareutvikling og dataanalyse.
           </p>
         </div>
 
         <div class="project-tabs reveal" aria-label="Filtrer prosjekter" data-i18n-attr="aria-label:project_tabs_aria">
           <button class="project-tab is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter_all">Alle</button>
-          <button class="project-tab" type="button" data-filter="ai" aria-pressed="false">AI</button>
-          <button class="project-tab" type="button" data-filter="web" aria-pressed="false">Web</button>
-          <button class="project-tab" type="button" data-filter="software" aria-pressed="false">Software</button>
-          <button class="project-tab" type="button" data-filter="data" aria-pressed="false">Data/BI</button>
+          <button class="project-tab" type="button" data-filter="ai" aria-pressed="false" data-i18n="filter_ai">AI</button>
+          <button class="project-tab" type="button" data-filter="web" aria-pressed="false" data-i18n="filter_web">Web</button>
+          <button class="project-tab" type="button" data-filter="software" aria-pressed="false" data-i18n="filter_software">Programvare</button>
+          <button class="project-tab" type="button" data-filter="data" aria-pressed="false" data-i18n="filter_data">Data/BI</button>
           <button class="project-tab" type="button" data-filter="pm" aria-pressed="false" data-i18n="filter_pm">Prosjektledelse</button>
         </div>
 
@@ -298,10 +298,10 @@
 
           <article class="project-card reveal" data-category="software web">
             <div class="project-topline">
-              <span data-i18n="software_exam_type">Eksamen · software engineering</span>
+              <span data-i18n="software_exam_type">Eksamen · programvareutvikling</span>
               <span data-i18n="project_student_work">Studentprosjekt</span>
             </div>
-            <h3 data-i18n="software_exam_title">Software Engineering eksamensprosjekt</h3>
+            <h3 data-i18n="software_exam_title">Programvareutvikling: eksamensprosjekt</h3>
             <p data-i18n="software_exam_text">
               Et eksamensprosjekt der vi arbeidet med en webapplikasjon med backend og frontend. Prosjektet handlet om
               å bygge funksjonalitet rundt produkter, brukere og innlogging/roller, og ga praktisk erfaring med Java,
@@ -335,23 +335,25 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="data">
+          <article class="project-card project-wide reveal" data-category="data">
             <div class="project-topline">
-              <span data-i18n="bigdata_type">Data/BI · praktisk prosjekt</span>
-              <span data-i18n="project_data_environment">Datamiljø</span>
+              <span data-i18n="bigdata_type">Data/BI · analyseprosjekt</span>
+              <span data-i18n="project_data_environment">Spark-analyse</span>
             </div>
-            <h3 data-i18n="bigdata_title">Big Data arbeidsmiljø</h3>
+            <h3 data-i18n="bigdata_title">Big Data: vær og trafikkulykker</h3>
             <p data-i18n="bigdata_text">
-              Et data- og BI-relatert prosjekt der jeg arbeidet med et lokalt miljø for big data-verktøy. Prosjektet
-              handlet om å forstå hvordan tjenester som Spark, Cassandra og Zeppelin kan brukes sammen for
-              databehandling, utforsking og analyse.
+              Et Big Data-prosjekt der målet var å undersøke sammenhenger mellom værforhold og trafikkulykker i USA.
+              Arbeidet tok utgangspunkt i store datasett på flere GB med ulykkes- og værdata, og handlet om å laste,
+              rense, koble og analysere data med Spark i et Docker-basert miljø med Cassandra og Zeppelin.
             </p>
             <div class="tag-row" aria-label="Big Data teknologier" data-i18n-attr="aria-label:bigdata_tags_aria">
               <span>Docker</span>
               <span>Apache Spark</span>
               <span>Cassandra</span>
               <span>Zeppelin</span>
-              <span data-i18n="tag_data_processing">Databehandling</span>
+              <span data-i18n="tag_weather_data">Værdata</span>
+              <span data-i18n="tag_traffic_accidents">Trafikkulykker</span>
+              <span data-i18n="tag_large_datasets">Store datasett</span>
             </div>
           </article>
         </div>
@@ -481,6 +483,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260618"></script>
   </body>
 </html>
