@@ -552,6 +552,14 @@ const setActiveSection = (sectionId) => {
 const updateActiveSectionFromScroll = () => {
   if (!trackedSections.length) return;
 
+  const documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+  const isNearBottom = window.scrollY + window.innerHeight >= documentHeight - 6;
+
+  if (isNearBottom) {
+    setActiveSection(trackedSections[trackedSections.length - 1].id);
+    return;
+  }
+
   const activationLine = window.innerHeight * 0.38;
   let activeSectionId = "";
 
